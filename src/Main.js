@@ -13,7 +13,7 @@ class Main extends Component {
     componentDidMount() {
         this.print();
         setInterval(() => {
-            this.time(2016, 4, 23) // 你们的纪念日
+            this.time(2020, 1, 11,14,26,21) // 你们的纪念日
         }, 1000
         )
         var audio = document.getElementById("audio");
@@ -51,9 +51,9 @@ class Main extends Component {
         };
         $("#autotype").autotype();
     }
-    time = (year, month, day) => {
+    time = (year, month, day,hour,minute,second) => {
         var dateNow = new Date();
-        var dateJNR = new Date(year, month - 1, day);
+        var dateJNR = new Date(year, month - 1, day,minute,second);
         // var anniversary = parseInt((dateNow - dateJNR) / (365*24*3600*1000))
         var d = parseInt((dateNow - dateJNR) / (24 * 3600 * 1000));
         var hour = parseInt(((dateNow - dateJNR) / (3600 * 1000)) % 24);
@@ -73,7 +73,7 @@ class Main extends Component {
             <div className="App animated bounceInLeft">
                 <div className="date">{date()}</div>
                 <div id="autotype">
-                    <h1 style={{ fontWeight: 900 }}>哈喽！wuli趴布猪！</h1>
+                    <h1 style={{ fontWeight: 900 }}>哈喽！狗程琳🐕！</h1>
                     <p >在煽情开始之前，先放首歌当背景音乐吧！Music!</p>
                     <p>今天是我们两周年的纪念日，从2016年4月23日到现在，我们一起经历了许许多多的事情，
                     有欢笑也有争吵，也曾因为一些事情闹过分手，但是我们都走过来了。</p>
